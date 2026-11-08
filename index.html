@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>ALEX QUIZ — Accueil</title><style>
+:root{font-family:Segoe UI,Arial,sans-serif;color:#152747;background:#f3f6fc}*{box-sizing:border-box}body{margin:0}header{background:#204de2;color:white;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}h1{margin:0;font-size:25px}nav{display:flex;gap:8px;flex-wrap:wrap}button{border:0;background:#315be8;color:white;border-radius:10px;padding:11px 17px;font-weight:700;cursor:pointer}button:hover{filter:brightness(.95)}button.secondary{background:#e6edff;color:#2446a0}button.active{background:#112e88;color:white;outline:2px solid white}main{max-width:1000px;margin:28px auto;padding:0 15px}.panel{background:white;border-radius:17px;padding:25px;box-shadow:0 5px 24px #1c3d7b12;margin-bottom:18px}h2{margin-top:0}label{display:block;font-weight:600;margin:12px 0 5px}input,select,textarea{font:inherit;width:100%;padding:11px;border:1px solid #cbd7ed;border-radius:9px;background:white}textarea{min-height:160px}input[type=radio]{width:auto}input[type=checkbox]{width:auto}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.muted{color:#64748b}.hidden{display:none!important}.item{border:1px solid #dbe4f4;padding:14px;border-radius:11px;margin:12px 0}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.row>*{flex-shrink:0}.pill{background:#eaf0ff;border-radius:50px;padding:5px 12px;color:#2049b8;font-weight:600}.error{color:#b42318}.success{color:#08744b}hr{border:0;border-top:1px solid #e5ebf4;margin:22px 0}.choice{display:block;padding:9px;border:1px solid #e0e8f7;border-radius:9px;margin:7px 0;cursor:pointer}.choice input{margin-right:8px}table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid #e5ebf4;text-align:left} .scroll{overflow:auto}.small{font-size:13px}#teacherTabs button.active{background:#204de2;color:white;outline:none}#teacherTabs button{background:#e9effc;color:#27447b}.exam-nav{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px}.progress-track{height:9px;background:#e6edff;border-radius:20px;overflow:hidden;margin:18px 0}.progress-fill{height:100%;background:#315be8;transition:width .2s}.question-number{color:#315be8;font-weight:700}.choice:has(input:checked){background:#e9f0ff;border-color:#315be8}.stat-card{background:#f0f5ff;border:1px solid #dce6ff;padding:18px;border-radius:14px}.stat-card strong{display:block;font-size:26px;color:#204de2;margin-top:6px}#teacherTabs button.active{background:#204de2!important;color:white!important}footer{text-align:center;color:#7b8ba5;margin:30px}
+/* ALEX QUIZ — Elegant welcome experience */
+:root{color:#102548;background:#f4f7fc}body{background:linear-gradient(145deg,#f4f7fc,#edf2fc 70%,#f7f9ff)}header{background:#fff;color:#122b57;padding:17px max(5%,calc((100vw - 1170px)/2));border-bottom:1px solid #e8edf6;box-shadow:0 2px 15px #1d3b7010}header h1{font-size:23px;letter-spacing:-.8px;color:#1d49ce}header nav button{background:transparent;color:#60718f;padding:10px 17px;border-radius:10px}header nav button:hover{background:#eff4ff;filter:none}header nav button.active{background:#315be8;color:#fff;outline:none}main{max-width:1180px;margin:32px auto}button{transition:transform .18s,background .18s,box-shadow .18s}button:hover{transform:translateY(-1px)}.panel{border:1px solid #e8eef9;box-shadow:0 14px 35px #1839680d}.welcome-page{min-height:530px;border-radius:26px;background:linear-gradient(118deg,#102f77 0%,#173f9c 53%,#345fea 100%);color:white;position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;padding:64px 54px;box-shadow:0 22px 55px #163a9329}.welcome-glow{position:absolute;inset:auto -100px -210px auto;width:530px;height:530px;background:radial-gradient(circle,#7298ff70,transparent 68%);pointer-events:none}.welcome-content{position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:10px;border:1px solid #ffffff45;border-radius:50px;padding:9px 14px;font-size:11px;letter-spacing:1.3px;font-weight:700;color:#dce9ff}.live-dot{width:8px;height:8px;background:#66edc0;border-radius:50%;box-shadow:0 0 0 4px #66edc024}.hero-mark{font-size:36px;font-weight:850;letter-spacing:-1.7px;margin:29px 0 12px;color:#fff}.hero-mark>span{margin-left:6px}.hero-mark em{font-style:normal;color:#9cc4ff}.welcome-page h2{font-size:clamp(30px,3.4vw,46px);line-height:1.12;letter-spacing:-1.6px;max-width:530px;margin:0 0 17px}.hero-subtitle{color:#d5e3ff;line-height:1.7;font-size:16px;max-width:490px}.welcome-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:32px}.student-cta{display:flex;align-items:center;gap:15px;text-align:left;padding:15px 19px;background:white;color:#1741a4;min-width:260px;border-radius:15px;box-shadow:0 12px 30px #081f5b40}.student-cta:hover{background:#f2f6ff;box-shadow:0 16px 32px #081f5b55}.cta-symbol{font-size:27px}.cta-label{display:flex;flex-direction:column;gap:3px}.cta-label strong{font-size:16px}.cta-label small{font-size:12px;font-weight:500;color:#7184a6}.cta-arrow{margin-left:auto;font-size:23px}.teacher-cta{border:1px solid #ffffff75;background:#ffffff12;padding:18px;color:white;border-radius:14px}.teacher-cta span{margin-left:12px}.teacher-cta:hover{background:#ffffff26}.welcome-features{display:flex;flex-wrap:wrap;gap:16px;margin-top:35px;font-size:12px;color:#cbdcff}.hero-art{height:350px;position:relative;display:flex;align-items:center;justify-content:center}.art-orbit{position:absolute;border:1px solid #ffffff25;border-radius:50%;width:410px;height:410px}.orbit-two{width:320px;height:320px}.art-card{background:#fff;border-radius:19px;padding:24px;color:#20355e;width:min(330px,100%);box-shadow:0 30px 60px #091c5666;transform:rotate(4deg);position:relative;z-index:1}.art-top{display:flex;justify-content:space-between;color:#8290a8;font-size:10px;font-weight:800;letter-spacing:1px;margin-bottom:23px}.art-line{height:12px;border-radius:6px;background:#e8edf7;margin-bottom:10px}.art-line.long{width:92%}.art-line.medium{width:64%;margin-bottom:24px}.art-choice{padding:12px 13px;border:1px solid #e6ebf5;border-radius:9px;margin-bottom:9px;color:#7b8ba8;font-size:12px}.art-choice.selected{background:#eaf2ff;border-color:#4c7bf4;color:#2755c5;font-weight:800}.art-choice b{float:right}.art-progress{height:6px;background:#e7eefb;border-radius:6px;margin-top:23px;overflow:hidden}.art-progress i{display:block;width:20%;height:100%;background:#315be8}.art-bottom{font-size:10px;font-weight:800;color:#8290a8;display:flex;justify-content:space-between;margin-top:10px}.art-star{position:absolute;color:#b8d0ff;font-size:35px}.star-one{top:4px;right:26px}.star-two{bottom:8px;left:15px}.home-note{font-size:12px;text-align:center;color:#7d8da9;margin:20px 0 28px}input:focus,select:focus,textarea:focus{outline:2px solid #85a7ff;outline-offset:1px;border-color:#4778f0}.choice:hover{border-color:#8ba9ee;background:#f6f9ff}@media(max-width:800px){.welcome-page{grid-template-columns:1fr;padding:38px 27px;min-height:0}.hero-art{display:none}.welcome-page h2{font-size:34px}.welcome-actions{align-items:stretch}.student-cta{min-width:0}.welcome-features{gap:10px}header{padding:15px 4%}main{margin:18px auto}.panel{padding:20px}}@media(max-width:420px){.welcome-page{padding:30px 20px}.hero-mark{font-size:29px}.welcome-page h2{font-size:30px}.student-cta{width:100%}.teacher-cta{width:100%}header nav{gap:2px}header nav button{padding:9px 10px}}
+
+.result-summary{max-width:640px;margin:12px auto;text-align:center;padding:34px 25px;border:1px solid #dce7fb;border-radius:24px;background:linear-gradient(145deg,#fff,#f1f6ff);box-shadow:0 16px 40px #1e43951a}.result-icon{font-size:43px;margin-bottom:10px}.result-score{font-size:54px;line-height:1.1;font-weight:850;color:#315be8;letter-spacing:-2px;margin:14px 0 3px}.result-score-label{font-size:12px;color:#637594;font-weight:750;letter-spacing:1.3px}.result-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}.result-metric{background:white;border:1px solid #e2eafa;border-radius:13px;padding:15px 7px}.result-metric strong{display:block;font-size:24px;color:#163c90}.result-metric span{font-size:12px;color:#6d7c97}.result-summary h2{margin:0 0 8px}.result-summary p{color:#667794}@media(max-width:450px){.result-score{font-size:42px}.result-metrics{gap:5px}.result-metric strong{font-size:19px}}
+
+/* V15 — typographie nette, douce et lisible */
+:root,body,button,input,select,textarea,table{font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif!important}
+body{font-size:15px;line-height:1.55;letter-spacing:.05px}h1,h2,h3,.hero-mark{font-family:"Segoe UI",Arial,sans-serif!important;letter-spacing:-.55px}button{font-weight:650}input,select,textarea{font-size:15px}
+.result-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:20px;padding:18px;background:#f2f7ff;border:1px solid #e0eaf9;border-radius:16px}.result-filters label{margin-top:0}.result-overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0}.scroll table{font-size:13px;white-space:nowrap}.scroll th{background:#f1f6ff;color:#27477e}.scroll tbody tr:hover{background:#f7faff}.good{color:#16834d!important}.bad{color:#d34545!important}.student-bilan{margin-top:24px;border:1px solid #dce7f7;border-radius:20px;padding:25px;background:linear-gradient(160deg,#fff,#f5f9ff);box-shadow:0 12px 28px #1e4c8b0e}.student-bilan h3{margin:0}.bilan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:16px 0}.bilan-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.bilan-main{background:#366be2;color:#fff;border-radius:16px;padding:23px;text-align:center}.bilan-main.light{background:#e9f1ff;color:#1b469b}.bilan-main span,.bilan-mini span{display:block;font-size:12px;font-weight:700}.bilan-main strong{display:block;font-size:clamp(27px,4vw,40px);margin-top:6px}.bilan-mini{background:#fff;border:1px solid #e2eaf7;border-radius:13px;padding:15px;text-align:center}.bilan-mini strong{display:block;font-size:25px}.student-bilan details{margin-top:22px}.student-bilan summary{cursor:pointer;color:#315be8;font-weight:700;padding:12px;background:#eaf2ff;border-radius:10px}.answer-line{border-bottom:1px solid #e6ebf4;padding:12px 4px}.answer-line p{margin:5px 0}@media(max-width:650px){.bilan-grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}.student-bilan{padding:15px}}
+
+/* V16 — Boutons d'action centrés en bas des formulaires et des cartes */
+#studentStart > p:has(>button),#teacherLogin > p:has(>button),#tab-results > p:has(>button),#tab-settings > p:has(>button){text-align:center;margin-top:26px;margin-bottom:12px}
+#studentStart > p > button,#teacherLogin > p > button,#tab-results > p > button,#tab-settings > p > button{min-width:225px;max-width:100%}
+.exam-nav{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid #e7edf8}
+.exam-nav #answeredCount{flex-basis:100%;text-align:center}
+.exam-nav button{min-width:245px;max-width:100%}
+#teacherTabs{justify-content:center;gap:10px}
+#tab-create > .row{justify-content:center;margin-top:22px}
+#tab-create > .row button{min-width:210px}
+#tab-create > .row:has(#importStatus){justify-content:center}
+#tab-create .row:has(#qCode){justify-content:flex-start;margin-top:0}
+#quizList .row,#questionList .row,.item > .row{justify-content:center}
+#studentDone > p:has(>button),.result-summary > p:has(>button){text-align:center}
+@media(max-width:540px){.exam-nav button,#studentStart > p > button,#teacherLogin > p > button{width:100%;min-width:0}#tab-create > .row button{width:100%;min-width:0}}
+</style><style>
+/* V14 : page de résultat grand format */
+.result-summary{max-width:1050px!important;margin:0 auto!important;padding:clamp(24px,5vw,58px)!important;border-radius:28px!important;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(145deg,#ffffff,#edf4ff)!important}
+.result-summary h2{font-size:clamp(28px,4vw,45px)!important;color:#163a83}
+.result-summary .result-icon{font-size:64px!important}
+.result-hero{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:100%;max-width:720px;margin:26px 0}
+.result-hero-card{border-radius:23px;padding:27px 16px;background:#eef4ff;border:1px solid #d9e6ff;text-align:center}
+.result-hero-card.primary{background:linear-gradient(135deg,#204ad4,#557cf2);color:white;border:none;box-shadow:0 16px 32px #234bc23b}
+.result-hero-card strong{display:block;font-size:clamp(39px,5vw,66px);letter-spacing:-2px;line-height:1.15}
+.result-hero-card span{display:block;margin-top:8px;font-size:14px;font-weight:750;letter-spacing:.5px}
+.result-hero-card:not(.primary) strong{color:#163c90}
+.result-summary .result-metrics{width:100%;max-width:800px;grid-template-columns:repeat(4,minmax(0,1fr))!important;margin:8px 0 27px!important;gap:12px!important}
+.result-summary .result-metric{padding:20px 8px!important}
+.result-summary .result-metric strong{font-size:clamp(24px,3vw,38px)!important}
+.result-summary .result-metric span{display:block;margin-top:6px}
+.result-summary .result-return{padding:14px 28px;border-radius:12px}
+@media(max-width:650px){.result-hero{gap:9px}.result-hero-card{padding:20px 7px}.result-summary .result-metrics{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+</style><style>
+/* V15 — unified bright, elegant interface on every page */
+:root{--ink:#193459;--blue:#3667dc;--sky:#edf5ff;--line:#e1eaf6;--shadow:0 16px 44px rgba(42,84,143,.09);color:var(--ink)!important;background:#f7faff!important}
+html{scroll-behavior:smooth}body{min-height:100vh;background:radial-gradient(ellipse at 5% 0%,#eaf5ff 0,transparent 37%),radial-gradient(ellipse at 95% 30%,#f1edff 0,transparent 36%),#f8fbff!important;color:var(--ink)}
+header{background:#ffffffeb!important;backdrop-filter:blur(12px);border-bottom:1px solid #e4edf8!important;box-shadow:0 3px 18px #2c54800a!important}header h1{color:#3263c7!important}header nav{gap:7px}header nav button{color:#476384!important;border:1px solid transparent!important}header nav button.active{background:#e6efff!important;color:#1d4fc0!important;border-color:#ccdcfa!important;outline:0!important}
+main{max-width:1180px!important;margin:34px auto!important}.panel{background:#fff!important;border:1px solid #e4ebf7!important;border-radius:24px!important;padding:clamp(20px,3vw,35px)!important;box-shadow:var(--shadow)!important;margin-bottom:22px!important}
+h2{color:#1d3e75;letter-spacing:-.5px}h3{color:#244a81}p{line-height:1.6}.muted{color:#6d7e99!important}
+button{background:#3769db;color:white;border-radius:12px;padding:12px 18px;box-shadow:0 5px 12px #3267c51c}button:hover{background:#2759c6;box-shadow:0 8px 20px #3267c52b}button.secondary,#teacherTabs button{background:#edf4ff!important;color:#2854aa!important;box-shadow:none;border:1px solid #dbe7fc!important}button.secondary:hover,#teacherTabs button:hover{background:#e0edff!important}#teacherTabs button.active{background:#3569dd!important;color:#fff!important;border-color:#3569dd!important}
+input,select,textarea{border:1px solid #d7e3f2!important;border-radius:12px!important;background:#fcfdff!important;padding:12px 14px!important;color:#1c365c!important;outline:none;transition:border-color .2s,box-shadow .2s}input:focus,select:focus,textarea:focus{border-color:#7ba2f4!important;box-shadow:0 0 0 4px #dceaff!important}label{color:#355076}.grid{gap:16px!important}.item{background:#fbfdff;border:1px solid #e0eafa!important;border-radius:16px!important;padding:18px!important;box-shadow:0 3px 12px #284c8707}.choice{background:#fcfdff;border:1px solid #dfe8f6!important;border-radius:13px!important;padding:13px!important;transition:.18s}.choice:hover{background:#f1f6ff!important;border-color:#a7c2f4!important}.choice:has(input:checked){background:#eaf2ff!important;border-color:#5685e9!important;box-shadow:0 0 0 2px #e5eeff}.pill{background:#eaf2ff!important;color:#2a5ab7!important}.stat-card{background:linear-gradient(145deg,#fff,#f0f6ff)!important;border:1px solid #dce8f9!important;border-radius:19px!important;padding:22px!important;box-shadow:0 6px 18px #3764a50c}.stat-card strong{color:#2e61cf!important;font-size:30px!important}
+table{background:white;border-radius:14px;overflow:hidden}th{background:#f0f6ff;color:#31588f;font-weight:750}th,td{padding:13px 12px!important;border-bottom:1px solid #e9eff8!important}tr:hover td{background:#fafcff}.progress-track{background:#e7effc!important;height:11px!important}.progress-fill{background:linear-gradient(90deg,#60a5fa,#3568dc)!important}.question-number{color:#2e62d1!important}.error{color:#c03c45}.success{color:#15805b}hr{border-top-color:#e9eef8!important}footer{color:#7b8ca5!important;padding-bottom:22px}
+/* Bring the landing page into the same light palette */
+.welcome-page{background:linear-gradient(120deg,#eaf4ff 0%,#f5f9ff 56%,#e9f0ff 100%)!important;color:#1c3d78!important;border:1px solid #dbe8fa!important;box-shadow:0 18px 50px #2b579a17!important}.welcome-page h2,.hero-mark{color:#193e82!important}.hero-mark em{color:#3b71dc!important}.hero-subtitle{color:#5c7193!important}.eyebrow{color:#3262b7!important;border-color:#c6dafa!important;background:#ffffffa8!important}.teacher-cta{background:#fff!important;border:1px solid #d4e3fa!important;color:#2e5fbc!important;box-shadow:0 8px 22px #3368b516}.teacher-cta:hover{background:#f4f8ff!important}.student-cta{background:#3568d9!important;color:#fff!important;box-shadow:0 12px 28px #2c62c531!important}.student-cta:hover{background:#285ac5!important}.student-cta small,.cta-label small{color:#e0eaff!important}.welcome-glow{background:radial-gradient(circle,#b7d4ff85,transparent 70%)!important}.welcome-features{color:#52739e!important}
+.result-summary{background:linear-gradient(145deg,#fff,#f3f8ff)!important;border:1px solid #deebfa!important;box-shadow:0 20px 55px #3268ad14!important}.result-hero-card.primary{background:linear-gradient(135deg,#4a80e8,#3463cd)!important}.result-hero-card:not(.primary){background:#eef5ff!important}.result-metric{background:#fff!important;border:1px solid #dfeafa!important;box-shadow:0 5px 16px #3665a80a}
+@media(max-width:650px){main{margin:18px auto!important;padding:0 12px!important}header{padding:15px!important}.panel{border-radius:18px!important}.welcome-page{padding:28px 22px!important;border-radius:20px!important}button{max-width:100%}}
+
+<style>
+/* V17 — Formulaires compacts et centres, sans modifier les tableaux ni les questions */
+#teacherLogin{max-width:340px;margin:24px auto 12px;text-align:left}
+#teacherLogin h2{text-align:center;margin-bottom:25px}
+#teacherLogin label,#teacherLogin input{width:100%}
+#teacherLogin > p:has(>button){text-align:center;margin-top:25px}
+#studentStart{max-width:720px;margin:0 auto}
+#studentStart .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;max-width:680px;margin:0 auto}
+#studentStart .grid > div{min-width:0}
+#studentStart > p:has(>button){text-align:center;margin-top:28px}
+#tab-create > .grid{max-width:760px;margin:0 auto;grid-template-columns:repeat(2,minmax(0,1fr))}
+#tab-create > .grid > div{min-width:0}
+#tab-create > .grid .row:has(#qCode){flex-wrap:nowrap;justify-content:flex-start}
+#tab-create #qCode{width:100%!important;min-width:0;flex:1}
+#tab-create .row:has(#qCode) button{min-width:0;white-space:nowrap}
+#tab-create > h2{text-align:center}
+#tab-settings > label,#tab-settings > input:not([type=file]){display:block;max-width:340px;margin-left:auto;margin-right:auto}
+#tab-settings > input[type=file]{display:block;max-width:440px;margin-left:auto;margin-right:auto}
+@media(max-width:600px){#studentStart .grid,#tab-create > .grid{grid-template-columns:1fr;max-width:360px}#teacherLogin{max-width:340px}#tab-create > .grid .row:has(#qCode){flex-wrap:wrap}}
+
+/* V18 — Accès enseignant : carte réellement compacte et centrée */
+#teacher.panel:has(#teacherLogin:not(.hidden)){max-width:470px!important;margin:45px auto 24px!important;padding:32px 28px!important}
+#teacherLogin{width:100%!important;max-width:300px!important;margin:0 auto!important;text-align:center!important}
+#teacherLogin h2{font-size:25px;text-align:center!important;margin:0 0 24px!important}
+#teacherLogin label{display:block!important;width:100%!important;max-width:300px!important;margin:0 auto 7px!important;text-align:left!important}
+#teacherLogin #teacherPass,#teacherLogin #teacherEmail{display:block!important;width:100%!important;max-width:300px!important;margin:0 auto 12px!important;text-align:left!important}
+#teacherLogin > p:has(>button){margin:22px auto 10px!important;text-align:center!important}
+#teacherLogin > p > button{width:100%!important;max-width:300px!important;min-width:0!important}
+#teacherLogin #loginError{text-align:center!important}
+@media(max-width:520px){#teacher.panel:has(#teacherLogin:not(.hidden)){margin:22px auto!important;padding:25px 18px!important}}
+</style><style>
+/* V20 — sélecteur bilingue, préserve la charte graphique */
+.language-switch{display:flex;gap:4px;padding:4px;background:#edf4ff;border:1px solid #d5e4fc;border-radius:13px;margin-inline-start:auto}
+.language-switch .lang-btn{background:transparent!important;color:#3764b0!important;padding:7px 13px;box-shadow:none;border-radius:9px;min-width:46px}
+.language-switch .lang-btn.selected{background:#3569dd!important;color:white!important}
+html[lang="ar"] body{direction:rtl}html[lang="ar"] .welcome-page,html[lang="ar"] .panel{text-align:right}
+html[lang="ar"] .welcome-page h2,html[lang="ar"] .hero-subtitle{letter-spacing:0}
+html[lang="ar"] .hero-art{direction:ltr}html[lang="ar"] .hero-mark{direction:ltr;text-align:right}
+html[lang="ar"] th,html[lang="ar"] td{text-align:right}
+html[lang="ar"] #teacherLogin label,html[lang="ar"] #teacherLogin input{text-align:right!important}
+html[lang="ar"] input[type=email],html[lang="ar"] input[type=password],html[lang="ar"] #qCode,html[lang="ar"] #sCode{direction:ltr;text-align:left!important}
+html[lang="ar"] .choice input{margin-right:0;margin-left:8px}
+html[lang="ar"] .cta-arrow{margin-left:0;margin-right:auto;transform:scaleX(-1)}
+html[lang="ar"] .result-summary{text-align:center}
+html[lang="ar"] .result-summary h2{text-align:center}
+html[lang="ar"] #teacherTabs{direction:rtl}
+@media(max-width:640px){.language-switch{margin-inline-start:0}header{justify-content:center}header h1{margin-inline-end:auto}}
+</style></head><body>
+<header><h1>🎓 ALEX QUIZ</h1><nav><button class="active" data-main="home">Accueil</button><button data-main="student">Élève</button><button data-main="teacher">Enseignant</button></nav><div aria-label="Langue / اللغة" class="language-switch" role="group"><button class="lang-btn selected" data-lang="fr" onclick="setLanguage('fr')" type="button">FR</button><button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')" type="button">AR</button></div></header>
+<main><div class="panel hidden" id="setupNotice" style="border-color:#e7b86c!important;background:#fffaf0!important">Configuration requise : renseigner SUPABASE_URL et SUPABASE_ANON_KEY dans index.html avant publication.</div><section class="welcome-page" id="home"><div class="welcome-glow"></div><div class="welcome-content"><div class="eyebrow"><span class="live-dot"></span> PLATEFORME D’ÉVALUATION INTERACTIVE</div><div class="hero-mark">✦ <span>ALEX <em>QUIZ</em></span></div><h2>Bienvenue sur votre espace d’évaluation.</h2><p class="hero-subtitle">Une expérience simple et agréable pour tester vos connaissances, question après question.</p><div class="welcome-actions"><button class="student-cta" onclick="go('student')"><span class="cta-symbol">🎓</span><span class="cta-label"><strong>Je suis élève</strong><small>Commencer mon QCM</small></span><span class="cta-arrow">→</span></button><button class="teacher-cta" onclick="go('teacher')">Espace enseignant <span>↗</span></button></div><div class="welcome-features"><span>✓ Questions une par une</span><span>✓ Chronomètre</span><span>✓ Résultats automatiques</span></div></div><div aria-hidden="true" class="hero-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-card"><div class="art-top"><span>QUIZ EN COURS</span><span>⏱ 09:42</span></div><div class="art-line long"></div><div class="art-line medium"></div><div class="art-choice">◯   Réponse A</div><div class="art-choice selected">●   Réponse B <b>✓</b></div><div class="art-choice">◯   Réponse C</div><div class="art-progress"><i></i></div><div class="art-bottom">QUESTION 04 / 20 <span>20 %</span></div></div><div class="art-star star-one">✦</div><div class="art-star star-two">✧</div></div></section><div class="home-note">ALEX QUIZ • Plateforme en ligne • QCM et résultats synchronisés.</div>
+<section class="panel hidden" id="student"><h2>Espace Élève</h2><div id="studentStart"><div class="grid"><div><label>Nom</label><input autocomplete="off" id="sName"/></div><div><label>Prénom</label><input autocomplete="off" id="sFirst"/></div><div><label>Classe</label><select id="sClass"><option value="">-- Choisir une classe --</option><option value="1AC A">1AC A</option><option value="1AC B">1AC B</option><option value="1AC C">1AC C</option><option value="1AC D">1AC D</option><option value="1AC E">1AC E</option><option value="3AC A">3AC A</option><option value="3AC B">3AC B</option><option value="3AC C">3AC C</option><option value="3AC D">3AC D</option><option value="3AC E">3AC E</option></select></div><div><label>Code du QCM</label><input id="sCode" placeholder="Ex. ROBOT50"/></div></div><p><button onclick="startQuiz()">Commencer le QCM</button></p><p class="error" id="studentError"></p></div><div class="hidden" id="studentExam"><div class="row"><span class="pill" id="examTitle"></span><span class="pill" id="timer"></span></div><div class="progress-track"><div class="progress-fill" id="examProgress" style="width:0%"></div></div><p class="question-number" id="examStep"></p><p class="muted">Après validation, vous ne pourrez pas revenir à la question précédente.</p><div id="examQuestions"></div><div class="exam-nav"><span class="muted" id="answeredCount"></span><button id="nextQuestion" onclick="moveQuestion(1)">Valider et passer à la suivante →</button><button class="hidden" id="finishQuestion" onclick="submitQuiz(false)">Terminer et envoyer</button></div></div><div class="hidden" id="studentDone"></div></section>
+<section class="panel hidden" id="teacher"><div id="teacherLogin"><h2>Accès enseignant</h2><label>Email</label><input autocomplete="email" id="teacherEmail" placeholder="enseignant@exemple.com" type="email"/><label>Mot de passe</label><input autocomplete="current-password" id="teacherPass" placeholder="Mot de passe" type="password"/><p><button onclick="login()">Se connecter</button></p><p style="text-align:center"><button class="secondary" onclick="signup()">Créer un compte enseignant</button></p><p class="muted small" style="text-align:center">Toute inscription nécessite une validation de l’administrateur.</p><p class="muted small" id="authHint" style="text-align:center"></p><p class="error" id="loginError"></p></div><div class="hidden" id="teacherArea"><div class="row" id="teacherTabs"><button class="active" data-tab="dashboard">Dashboard</button><button data-tab="create">Créer une évaluation</button><button data-tab="manage">Mes QCM</button><button data-tab="results">Résultats</button><button data-tab="settings">Paramètres</button><button class="hidden" id="adminTabButton" data-tab="admin">Administration</button><button class="secondary" onclick="logout()">Déconnexion</button></div><hr/>
+<div class="hidden" id="tab-admin"><h2>Validation des enseignants</h2><p class="muted">Approuvez ou refusez les demandes d’inscription.</p><p><button onclick="loadAdmin()">Actualiser les demandes</button></p><div id="adminList"></div></div><div id="tab-dashboard"><h2>Tableau de bord</h2><div class="grid" id="dashboardStats"></div><h3>Derniers résultats</h3><div class="scroll" id="dashboardRecent"></div></div><div class="hidden" id="tab-create"><h2>Créer une évaluation</h2><div class="grid"><div><label>Titre</label><input id="qTitle" placeholder="Contrôle Robotique"/></div><div><label>Code du QCM</label><div class="row"><input id="qCode" placeholder="ROBOT50" style="width:180px"/><button class="secondary" onclick="generateCode()">Générer</button></div></div><div><label>Durée (minutes, 0 = sans limite)</label><input id="qMinutes" min="0" type="number" value="30"/></div><div><label>Afficher la note à l'élève</label><select id="qShow"><option value="yes">Oui</option><option value="no">Non</option></select></div></div><div class="item" style="margin-top:22px"><h3 style="margin-top:0">Ajouter une question</h3><label>Type de question</label><select id="newQuestionType"><option value="qcm">QCM – Choix multiple</option><option value="fill_blank">Texte à trous</option><option value="matching">Association</option><option value="open">Question ouverte – Résolution détaillée</option></select><p class="muted small">Choisissez le type, puis ajoutez votre question. Vous pouvez mélanger les types.</p><button class="secondary" onclick="addManual()">+ Ajouter une question</button></div><div class="item" style="margin-top:12px"><div class="row" style="justify-content:space-between;align-items:center"><div><strong>Importer les questions (Copier-Coller)</strong><p class="muted small" style="margin:4px 0">Facultatif — pour les enseignants ayant déjà préparé leurs QCM.</p></div><button class="secondary" id="toggleImportBtn" onclick="toggleImport()">Ouvrir l'importation</button></div><div id="pasteAddMode" class="hidden" style="margin-top:14px"><p class="muted small">Copiez les questions depuis Word ou PDF. Format : question numérotée, 2 à 4 choix (A. B. puis C. D. si nécessaire), puis « Réponse correcte : B » ou « Réponse : B ».</p><textarea id="importText" placeholder="1. Qu'est-ce qu'un robot ?
+A. Une machine programmable
+B. Un téléphone
+C. Une règle
+D. Un cahier
+Réponse correcte : A"></textarea><div class="row" style="margin-top:10px"><button class="secondary" onclick="previewImport()">Analyser et prévisualiser</button><span class="muted" id="importStatus"></span></div><div id="importPreview" class="hidden" style="margin-top:12px"></div></div></div><h3>Questions ajoutées : <span id="count">0</span></h3><p class="muted small">V25 — Prévisualisation des quatre types. Publication des nouveaux types désactivée jusqu’à la mise à jour du moteur de correction Supabase.</p><div id="questionList"></div><div class="row"><button class="secondary" onclick="addManual()">+ Ajouter une question du type sélectionné</button><button onclick="saveQuiz()">Enregistrer le QCM</button></div><p id="saveStatus"></p></div>
+<div class="hidden" id="tab-manage"><h2>Mes QCM</h2><div id="quizList"></div></div><div class="hidden" id="tab-results"><h2>Résultats des élèves</h2><div class="result-filters"><div><label for="resultClassFilter">Classe</label><select id="resultClassFilter" onchange="renderResults()"><option value="">Toutes les classes</option><option>1AC A</option><option>1AC B</option><option>1AC C</option><option>1AC D</option><option>1AC E</option><option>3AC A</option><option>3AC B</option><option>3AC C</option><option>3AC D</option><option>3AC E</option></select></div><div><label for="resultQuizFilter">QCM</label><select id="resultQuizFilter" onchange="renderResults()"><option value="">Tous les QCM</option></select></div></div><p style="text-align:center"><button class="secondary" onclick="refreshTeacherResults()">↻ Actualiser les résultats</button></p><p id="resultsRefreshStatus" class="muted small" style="text-align:center"></p><div id="stats"></div><div class="scroll"><table><thead><tr><th>Élève</th><th>Classe</th><th>QCM</th><th>Score</th><th>Note /20</th><th>Correctes</th><th>Incorrectes</th><th>Sans réponse</th><th>Réussite</th><th>Date</th><th>Détails</th></tr></thead><tbody id="resultRows"></tbody></table></div><div class="hidden" id="studentResultDetails"></div><p><button onclick="exportCSV()">Exporter CSV (Excel) — sélection affichée</button></p></div><div class="hidden" id="tab-settings"><h2>Paramètres</h2><p>Votre compte enseignant est sécurisé par Supabase Auth.</p><p class="muted" id="accountEmail"></p><p class="muted small">Chaque enseignant accède uniquement à ses QCM et résultats.</p></div></div></section></main><footer>ALEX QUIZ • Version en ligne</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+'use strict';
+const SUPABASE_URL='https://hvgmmvuclfopgpccfyro.supabase.co';
+const SUPABASE_ANON_KEY='sb_publishable_smt39ZmKPCgApxMlLnAX4A_MPYILJl2';
+const configured=SUPABASE_URL.startsWith('https://')&&SUPABASE_ANON_KEY.startsWith('sb_publishable_');
+const client=configured&&window.supabase?window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
+let db={quizzes:[],results:[]},pending=[],editing=null,activeExam=null,deadline=null,ticker=null,teacherUnlocked=false,authUser=null,teacherRole=null;
+const el=id=>document.getElementById(id);
+const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function errorText(e){return e?.message||String(e||'Erreur inconnue')}
+function go(page){['home','student','teacher'].forEach(id=>el(id).classList.toggle('hidden',id!==page));document.querySelectorAll('[data-main]').forEach(b=>b.classList.toggle('active',b.dataset.main===page));if(page==='teacher'&&teacherUnlocked)tab('dashboard')}
+document.querySelectorAll('[data-main]').forEach(b=>b.onclick=()=>go(b.dataset.main));
+function requireClient(){if(client)return true;alert('Configuration Supabase manquante. Consultez le guide de mise en ligne.');return false}
+async function signup(){
+ if(!requireClient())return;
+ const email=el('teacherEmail').value.trim(),password=el('teacherPass').value;
+ if(!email||password.length<8){el('loginError').textContent='Saisissez un email valide et un mot de passe de 8 caractères minimum.';return}
+ el('loginError').textContent='Création du compte...';
+ const {data,error}=await client.auth.signUp({email,password});
+ if(error){el('loginError').textContent=errorText(error);return}
+ el('loginError').textContent='Inscription reçue. Confirmez votre email puis connectez-vous : votre demande sera en attente de validation.';
+ if(data.session&&data.user)await enterTeacher(data.user);
+}
+async function login(){
+ if(!requireClient())return;
+ el('loginError').textContent='Connexion...';
+ const {data,error}=await client.auth.signInWithPassword({email:el('teacherEmail').value.trim(),password:el('teacherPass').value});
+ if(error){el('loginError').textContent=errorText(error);return}
+ await enterTeacher(data.user);
+}
+async function enterTeacher(user){
+ authUser=user;
+ let {data:profile,error}=await client.from('teacher_profiles').select('role,approval_status').eq('id',user.id).maybeSingle();
+ if(error){el('loginError').textContent='Impossible de vérifier le compte : '+errorText(error);await client.auth.signOut();authUser=null;return}
+ if(!profile){
+  const created=await client.from('teacher_profiles').insert({id:user.id,display_name:(user.email||'').split('@')[0]});
+  if(created.error){el('loginError').textContent='Inscription en attente : '+errorText(created.error);await client.auth.signOut();authUser=null;return}
+  profile={role:'teacher',approval_status:'pending'};
+ }
+ if(profile.approval_status!=='approved'){
+  el('loginError').textContent=profile.approval_status==='rejected'?'Votre demande a été refusée. Contactez l’administrateur.':'Votre compte est en attente de validation par l’administrateur.';
+  await client.auth.signOut();authUser=null;return;
+ }
+ teacherRole=profile.role;teacherUnlocked=true;
+ el('teacherLogin').classList.add('hidden');el('teacherArea').classList.remove('hidden');el('loginError').textContent='';
+ el('accountEmail').textContent=user.email||'';
+ el('adminTabButton').classList.toggle('hidden',teacherRole!=='super_admin');
+ await loadTeacher();tab('dashboard');
+}
+async function logout(){
+ if(client)await client.auth.signOut();authUser=null;teacherRole=null;teacherUnlocked=false;db={quizzes:[],results:[]};
+ el('teacherLogin').classList.remove('hidden');el('teacherArea').classList.add('hidden');el('teacherPass').value='';go('home');
+}
+async function loadAdmin(){
+ if(teacherRole!=='super_admin')return;
+ const {data,error}=await client.rpc('admin_list_teachers');
+ if(error){el('adminList').textContent='Erreur : '+errorText(error);return}
+ el('adminList').innerHTML=(data||[]).length?(data||[]).map(p=>`<div class="item"><strong>${safe(p.email)}</strong><p>${safe(p.display_name||'Enseignant')} — <span class="pill">${safe(p.status)}</span></p><div class="row"><button onclick="reviewTeacher('${p.teacher_id}','approved')">Accepter</button><button class="secondary" onclick="reviewTeacher('${p.teacher_id}','rejected')">Refuser</button><button class="secondary" onclick="reviewTeacher('${p.teacher_id}','pending')">En attente</button></div></div>`).join(''):'Aucun enseignant à afficher.';
+}
+async function reviewTeacher(id,status){
+ if(!confirm('Confirmer le statut : '+status+' ?'))return;
+ const {error}=await client.rpc('admin_review_teacher',{p_teacher_id:id,p_status:status});
+ if(error){alert(errorText(error));return}await loadAdmin();
+}
+async function loadTeacher(){if(!client||!authUser)return;const [q,r]=await Promise.all([client.from('quizzes').select('id,title,code,minutes,show_grade,published,questions').order('created_at',{ascending:false}),client.from('quiz_results').select('id,quiz_id,student_name,student_first,student_class,grade,answers,correct_count,incorrect_count,unanswered_count,created_at').order('created_at',{ascending:true})]);if(q.error||r.error){alert('Erreur de synchronisation : '+errorText(q.error||r.error));return}db.quizzes=q.data.map(x=>({...x,show:!!x.show_grade,questions:x.questions||[]}));db.results=r.data.map(x=>({id:x.id,quizId:x.quiz_id,title:db.quizzes.find(q=>q.id===x.quiz_id)?.title||'QCM',name:x.student_name,first:x.student_first,cl:x.student_class,correct_count:x.correct_count,incorrect_count:x.incorrect_count,unanswered_count:x.unanswered_count,grade:Number(x.grade),date:new Date(x.created_at).toLocaleString('fr-FR'),answers:x.answers||[]}))}
+function tab(id){if(id==='admin'&&teacherRole!=='super_admin')return;['dashboard','create','manage','results','settings','admin'].forEach(t=>el('tab-'+t).classList.toggle('hidden',t!==id));document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));if(id==='admin'&&teacherRole==='super_admin')loadAdmin();if(id==='dashboard')renderDashboard();if(id==='manage')renderManage();if(id==='results')refreshTeacherResults()}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>tab(b.dataset.tab));
+function generateCode(){let code;do{code='QZ-'+Math.random().toString(36).slice(2,8).toUpperCase()}while(db.quizzes.some(q=>q.code===code&&q.id!==editing));el('qCode').value=code}
+function parseQuestions(text){
+ text=text.replace(/\r/g,'\n').replace(/\u00a0/g,' ').replace(/☐/g,'').replace(/\u2028/g,'\n');
+ const answerMap={};
+ for(const m of text.matchAll(/(?:^|\s)(\d{1,3})\s*:\s*([ABCD])\b/gi))answerMap[Number(m[1])]=m[2].toUpperCase();
+ const lines=text.split(/\n/).map(x=>x.trim()).filter(Boolean);
+ const out=[];let cur=null;
+ function flush(){if(cur&&cur.text&&cur.options.some(Boolean)){
+ cur.answer=cur.answer||answerMap[cur.num]||'';
+ out.push({type:'qcm',text:cur.text,options:cur.options.slice(0,Math.max(2,cur.options.findLastIndex(o=>o.trim())+1)),answer:cur.answer,points:1,sourceNumber:cur.num});
+ }}
+ for(const line of lines){
+  if(/^(PARTIE\s+\d+|NIVEAU\s*:|\d+\s+QUESTIONS|QCM\s*[–-]|CORRIG[ÉE]|BAR[ÈE]ME|ALEX TECH|NOM ET PR[ÉE]NOM|CONSIGNE)/i.test(line))continue;
+  const q=line.match(/^(\d{1,3})\s*[.)]\s*(.+)/);
+  if(q){flush();cur={num:Number(q[1]),text:q[2],options:['','','',''],answer:''};continue}
+  const opt=line.match(/^[\s\[\]☐□]*([ABCD])\s*[.)\-:]\s*(.+)/i);
+  if(opt&&cur){cur.options['ABCD'.indexOf(opt[1].toUpperCase())]=opt[2];continue}
+  const ans=line.match(/^(?:R[ÉE]PONSE(?:\s+CORRECTE)?|BONNE\s+R[ÉE]PONSE|CORRECTION)\s*[:\-]\s*([ABCD])\b/i);
+  if(ans&&cur){cur.answer=ans[1].toUpperCase();continue}
+  if(cur&&!cur.options.some(Boolean)&&!/^\d+\s*:/.test(line))cur.text+=' '+line;
+ }
+ flush();return out;
+}
+let importDraft=[];
+function toggleImport(){const area=el('pasteAddMode');area.classList.toggle('hidden');el('toggleImportBtn').textContent=area.classList.contains('hidden')?"Ouvrir l'importation":"Fermer l'importation";}
+function importProblem(q){const issues=[];const n=q.options.length;if(!q.text.trim())issues.push('énoncé manquant');if(n<2||n>4)issues.push('nombre de choix invalide');if(q.options.some(o=>!o.trim()))issues.push('choix manquant');if(!q.answer||!'ABCD'.slice(0,n).includes(q.answer))issues.push('réponse correcte manquante ou hors des choix');return issues;}
+function previewImport(){
+ importDraft=parseQuestions(el('importText').value);
+ const preview=el('importPreview');preview.classList.remove('hidden');
+ if(!importDraft.length){preview.innerHTML='<p class="error">Aucune question QCM détectée. Vérifiez le format du texte.</p>';el('importStatus').textContent='';return}
+ const bad=importDraft.filter(q=>importProblem(q).length);
+ el('importStatus').textContent=importDraft.length+' détectée(s) · '+bad.length+' à corriger';
+ preview.innerHTML='<h4>Aperçu avant ajout</h4>'+importDraft.map((q,i)=>`<div class="item" style="margin-bottom:8px"><strong>Question ${q.sourceNumber||i+1} : ${safe(q.text)}</strong><p class="muted small">${q.options.map((o,j)=>safe('ABCD'[j]+'. '+(o||'—'))).join(' · ')}</p><p class="${importProblem(q).length?'error':'good'}">${importProblem(q).length?'⚠️ '+safe(importProblem(q).join(', ')):'✓ Réponse correcte : '+safe(q.answer)}</p></div>`).join('')+(bad.length?'<p class="error">Corrigez le texte source puis cliquez à nouveau sur « Analyser et prévisualiser ». Aucun ajout effectué.</p>':'<button onclick="confirmImport()">Confirmer l’ajout des '+importDraft.length+' questions</button>');
+}
+function confirmImport(){if(!importDraft.length||importDraft.some(q=>importProblem(q).length))return;pending.push(...importDraft.map(({sourceNumber,...q})=>q));const n=importDraft.length;importDraft=[];el('importPreview').classList.add('hidden');el('importPreview').innerHTML='';el('importStatus').textContent=n+' question(s) ajoutée(s).';renderPending();}
+function importQuestions(){previewImport()}
+function normalizeLegacyTrueFalse(q){if(q.type!=='true_false')return q;return {...q,type:'qcm',options:['Vrai','Faux','',''],answer:q.answer==='false'?'B':'A'};}
+function addManual(){const type=el('newQuestionType')?.value||'qcm';pending.push({type:'qcm',text:'',options:['','','',''],answer:'',points:1});if(type!=='qcm')changeQuestionType(pending.length-1,type);else renderPending();}
+function updateQuestion(i,field,val,option){if(field==='option')pending[i].options[option]=val;else pending[i][field]=val}
+function removeQuestion(i){pending.splice(i,1);renderPending()}
+function setChoiceCount(i,n){if(!pending[i]||pending[i].type!=='qcm'||![2,3,4].includes(n))return;const opts=pending[i].options||[];pending[i].options=Array.from({length:n},(_,j)=>opts[j]||'');if(!'ABCD'.slice(0,n).includes(pending[i].answer))pending[i].answer='';renderPending()}
+function changeQuestionType(i,type){const old=pending[i];const base={type,text:old.text||'',points:old.points||1};if(type==='qcm')Object.assign(base,{options:['','','',''],answer:''});if(type==='fill_blank')Object.assign(base,{answer:'',caseSensitive:false});if(type==='matching')Object.assign(base,{pairs:[['',''],['','']]});if(type==='open')Object.assign(base,{teacherInstructions:''});pending[i]=base;renderPending()}
+function updatePair(i,j,k,val){pending[i].pairs[j][k]=val}
+function addPair(i){pending[i].pairs.push(['','']);renderPending()}
+function removePair(i,j){if(pending[i].pairs.length<=2)return;pending[i].pairs.splice(j,1);renderPending()}
+function renderPending(){
+ el('count').textContent=pending.length;
+ el('questionList').innerHTML=pending.map((q,i)=>{
+ const type=q.type||'qcm';
+ const types=[['qcm','QCM'],['fill_blank','Texte à trous'],['matching','Association'],['open','Question ouverte – Résolution détaillée']];
+ let fields='';
+ if(type==='qcm'){const opts=Array.isArray(q.options)?q.options:['','','',''];const n=Math.max(2,Math.min(4,opts.length));fields=`<label>Nombre de choix</label><select onchange="setChoiceCount(${i},Number(this.value))">${[2,3,4].map(k=>`<option value="${k}" ${n===k?'selected':''}>${k} choix</option>`).join('')}</select>`+opts.slice(0,n).map((o,j)=>`<label>Choix ${'ABCD'[j]}</label><input value="${safe(o)}" oninput="updateQuestion(${i},'option',this.value,${j})">`).join('')+`<label>Bonne réponse</label><select onchange="updateQuestion(${i},'answer',this.value)"><option value="">Choisir</option>${'ABCD'.slice(0,n).split('').map(c=>`<option value="${c}" ${q.answer===c?'selected':''}>${c}</option>`).join('')}</select>`}
+
+ if(type==='fill_blank')fields=`<p class="muted small">Insérez [trou] dans l’énoncé à l’endroit du mot manquant.</p><label>Réponse attendue</label><input value="${safe(q.answer||'')}" oninput="updateQuestion(${i},'answer',this.value)"><label class="row"><input type="checkbox" ${q.caseSensitive?'checked':''} onchange="updateQuestion(${i},'caseSensitive',this.checked)"> Respecter les majuscules/minuscules</label>`;
+ if(type==='matching')fields=`<p class="muted small">Indiquez les éléments correspondants. Chaque ligne forme une paire correcte.</p>${(q.pairs||[]).map((pair,j)=>`<div class="row"><input placeholder="Élément ${j+1}" value="${safe(pair[0])}" oninput="updatePair(${i},${j},0,this.value)"><input placeholder="Correspondance" value="${safe(pair[1])}" oninput="updatePair(${i},${j},1,this.value)"><button class="secondary" onclick="removePair(${i},${j})">×</button></div>`).join('')}<button class="secondary" onclick="addPair(${i})">+ Ajouter une paire</button>`;
+ if(type==='open')fields=`<p class="muted small">L’élève rédigera toute sa solution. Correction manuelle par l’enseignant.</p><label>Consignes / corrigé de référence (réservé à l’enseignant)</label><textarea oninput="updateQuestion(${i},'teacherInstructions',this.value)">${safe(q.teacherInstructions||'')}</textarea>`;
+ return `<div class="item"><div class="row"><strong>Question ${i+1}</strong><button class="secondary" onclick="removeQuestion(${i})">Supprimer</button></div><label>Type de question</label><select onchange="changeQuestionType(${i},this.value)">${types.map(([v,l])=>`<option value="${v}" ${type===v?'selected':''}>${l}</option>`).join('')}</select><label>Énoncé</label><textarea oninput="updateQuestion(${i},'text',this.value)">${safe(q.text||'')}</textarea>${fields}<label>Points</label><input type="number" min="0.1" step="0.1" value="${Number(q.points)||1}" oninput="updateQuestion(${i},'points',Number(this.value))"></div>`
+ }).join('')
+}
+async function saveQuiz(){if(!authUser)return;const title=el('qTitle').value.trim(),code=el('qCode').value.trim().toUpperCase(),minutes=Number(el('qMinutes').value);if(!code){const message=typeof uiLanguage!=='undefined'&&uiLanguage==='ar'?'المرجو إدخال رمز الاختبار قبل الحفظ.':'Veuillez saisir le code du QCM avant l’enregistrement.';el('saveStatus').textContent='⚠️ '+message;el('saveStatus').className='error';el('qCode').style.border='2px solid #d34545';el('qCode').focus();alert('⚠️ '+message);return}el('qCode').style.border='';el('saveStatus').className='';if(!title){el('saveStatus').textContent='⚠️ Veuillez saisir le titre du QCM.';el('saveStatus').className='error';el('qTitle').focus();return}if(!pending.length&&el('importText').value.trim()){const parsed=parseQuestions(el('importText').value);if(!parsed.length){el('saveStatus').textContent='⚠️ Aucune question détectée dans le texte importé. Vérifiez le format.';el('saveStatus').className='error';previewImport();return}const bad=parsed.findIndex(q=>importProblem(q).length);if(bad!==-1){el('saveStatus').textContent='⚠️ Importation : question '+(bad+1)+' — '+importProblem(parsed[bad]).join(', ')+'.';el('saveStatus').className='error';previewImport();return}pending.push(...parsed.map(({sourceNumber,...q})=>q));importDraft=[];el('importPreview').classList.add('hidden');el('importPreview').innerHTML='';el('importStatus').textContent=parsed.length+' question(s) ajoutée(s) automatiquement.';renderPending()}if(!pending.length){el('saveStatus').textContent='⚠️ Ajoutez au moins une question avant de sauvegarder.';el('saveStatus').className='error';return}if(pending.some(q=>(q.type||'qcm')!=='qcm')){el('saveStatus').textContent='⚠️ Les nouveaux types sont en préparation : la correction sécurisée Supabase doit être installée avant leur publication.';el('saveStatus').className='error';return}if(pending.some(q=>!q.text.trim()||(!Array.isArray(q.options)||q.options.length<2||q.options.length>4||q.options.some(o=>!String(o).trim()))||!'ABCD'.slice(0,q.options?.length||0).includes(q.answer)||!(Number(q.points)>0))){const badIndex=pending.findIndex(q=>!q.text.trim()||(!Array.isArray(q.options)||q.options.length<2||q.options.length>4||q.options.some(o=>!String(o).trim()))||!'ABCD'.slice(0,q.options?.length||0).includes(q.answer)||!(Number(q.points)>0));el('saveStatus').textContent='⚠️ Question '+(badIndex+1)+' : complétez les 2 à 4 choix, la bonne réponse et les points.';return}const payload={title,code,minutes:Math.max(0,minutes||0),show_grade:el('qShow').value==='yes',published:true,questions:pending};const response=editing?await client.from('quizzes').update(payload).eq('id',editing):await client.from('quizzes').insert({...payload,teacher_id:authUser.id});if(response.error){el('saveStatus').textContent='Erreur : '+errorText(response.error);return}editing=null;pending=[];el('qTitle').value='';el('qCode').value='';el('importText').value='';el('importStatus').textContent='';importDraft=[];el('importPreview').innerHTML='';el('importPreview').classList.add('hidden');renderPending();el('saveStatus').textContent='QCM enregistré !';await loadTeacher();tab('manage')}
+function renderManage(){el('quizList').innerHTML=db.quizzes.length?db.quizzes.map(q=>`<div class="item"><strong>${safe(q.title)}</strong> <span class="pill">${safe(q.code)}</span><p class="muted">${q.questions.length} questions • ${q.minutes||'Sans limite'} min</p><div class="row"><button class="secondary" onclick="editQuiz('${q.id}')">Modifier</button><button class="secondary" onclick="duplicateQuiz('${q.id}')">Dupliquer</button><button class="secondary" onclick="deleteQuiz('${q.id}')">Supprimer</button></div></div>`).join(''):'Aucun QCM enregistré.'}
+function editQuiz(id){const q=db.quizzes.find(x=>x.id===id);if(!q)return;editing=id;pending=JSON.parse(JSON.stringify(q.questions)).map(normalizeLegacyTrueFalse);el('qTitle').value=q.title;el('qCode').value=q.code;el('qMinutes').value=q.minutes;el('qShow').value=q.show?'yes':'no';el('saveStatus').textContent='Mode modification';renderPending();tab('create')}
+function duplicateQuiz(id){const q=db.quizzes.find(x=>x.id===id);if(!q)return;editing=null;pending=JSON.parse(JSON.stringify(q.questions)).map(normalizeLegacyTrueFalse);el('qTitle').value=q.title+' (copie)';el('qMinutes').value=q.minutes;el('qShow').value=q.show?'yes':'no';generateCode();renderPending();tab('create')}
+async function deleteQuiz(id){if(!confirm('Supprimer ce QCM et ses résultats ?'))return;const {error}=await client.from('quizzes').delete().eq('id',id);if(error){alert(errorText(error));return}await loadTeacher();renderManage()}
+async function startQuiz(){if(!requireClient())return;const name=el('sName').value.trim(),first=el('sFirst').value.trim(),cl=el('sClass').value.trim(),code=el('sCode').value.trim().toUpperCase();if(!name||!first||!cl||!code){el('studentError').textContent='Veuillez compléter tous les champs.';return}el('studentError').textContent='Recherche du QCM...';const {data,error}=await client.rpc('get_public_quiz',{p_code:code});if(error||!data){el('studentError').textContent=error?'Erreur : '+errorText(error):'Code QCM introuvable.';return}const q={...data,show:!!data.show_grade};if(!Array.isArray(q.questions)||!q.questions.length){el('studentError').textContent='QCM invalide.';return}el('studentError').textContent='';activeExam={q,name,first,cl,answers:Array(q.questions.length).fill(''),index:0};deadline=q.minutes?Date.now()+q.minutes*60000:null;el('studentStart').classList.add('hidden');el('studentDone').classList.add('hidden');el('studentExam').classList.remove('hidden');el('examTitle').textContent=q.title;renderExamQuestion();clearInterval(ticker);function tick(){if(!activeExam)return;if(!deadline){el('timer').textContent='Sans limite';return}const seconds=Math.max(0,Math.ceil((deadline-Date.now())/1000));el('timer').textContent='Temps : '+Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');if(seconds===0)submitQuiz(true)}tick();ticker=setInterval(tick,1000)}
+function renderExamQuestion(){if(!activeExam)return;const {q,index,answers}=activeExam,x=q.questions[index];el('examStep').textContent=`Question ${index+1} sur ${q.questions.length}`;el('examProgress').style.width=((index+1)/q.questions.length*100)+'%';el('answeredCount').textContent=answers.filter(Boolean).length+' / '+q.questions.length+' réponses';el('examQuestions').innerHTML=`<div class="item"><h3>${safe(x.text)}</h3>${x.options.map((o,j)=>`<label class="choice"><input type="radio" name="currentAnswer" value="${'ABCD'[j]}" ${answers[index]==='ABCD'[j]?'checked':''} onchange="chooseAnswer(this.value)"> <strong>${'ABCD'[j]}.</strong> ${safe(o)}</label>`).join('')}</div>`;el('nextQuestion').classList.toggle('hidden',index===q.questions.length-1);el('finishQuestion').classList.toggle('hidden',index!==q.questions.length-1)}
+function chooseAnswer(value){if(!activeExam)return;activeExam.answers[activeExam.index]=value;el('answeredCount').textContent=activeExam.answers.filter(Boolean).length+' / '+activeExam.q.questions.length+' réponses'}
+function moveQuestion(delta){if(!activeExam||delta!==1)return;if(deadline&&Date.now()>=deadline){submitQuiz(true);return}if(!activeExam.answers[activeExam.index]){alert('Choisissez une réponse avant de continuer.');return}activeExam.index++;renderExamQuestion()}
+let submitting=false;
+async function submitQuiz(auto){if(!activeExam||submitting)return;if(!auto&&!activeExam.answers[activeExam.index]){alert('Choisissez une réponse avant de terminer.');return}submitting=true;clearInterval(ticker);const {q,name,first,cl,answers}=activeExam;const {data,error}=await client.rpc('submit_public_quiz',{p_code:el('sCode').value.trim().toUpperCase(),p_name:name,p_first:first,p_class:cl,p_answers:answers});submitting=false;if(error){alert('Envoi impossible : '+errorText(error)+' — Réessayez.');return}activeExam=null;el('studentExam').classList.add('hidden');el('studentDone').classList.remove('hidden');const correct=Number(data.correct||0),incorrect=Number(data.incorrect||0),unanswered=Number(data.unanswered||0),grade=Number(data.grade||0),percentage=q.questions.length?Math.round(correct/q.questions.length*100):0;el('studentDone').innerHTML=`<div class="result-summary"><div class="result-icon">🏆</div><h2>Résultat de votre QCM</h2><p><strong>${safe(first+' '+name)}</strong> · ${safe(cl)} · ${safe(q.title)}</p>${q.show?`<div class="result-hero"><div class="result-hero-card primary"><strong>${correct} / ${q.questions.length}</strong><span>SCORE SUR ${q.questions.length}</span></div><div class="result-hero-card"><strong>${grade.toFixed(2)} / 20</strong><span>NOTE SUR 20</span></div></div><div class="result-metrics"><div class="result-metric"><strong>${correct}</strong><span>Correctes</span></div><div class="result-metric"><strong>${incorrect}</strong><span>Incorrectes</span></div><div class="result-metric"><strong>${unanswered}</strong><span>Sans réponse</span></div><div class="result-metric"><strong>${percentage}%</strong><span>Réussite</span></div></div>`:'<p>Vos réponses ont été enregistrées. Votre enseignant communiquera votre note.</p>'}<p>${auto?'Temps écoulé — réponses envoyées.':'Évaluation terminée — réponses enregistrées.'}</p><button class="result-return" onclick="resetStudent()">Retour à l’accueil</button></div>`}
+function resetStudent(){el('studentDone').classList.add('hidden');el('studentStart').classList.remove('hidden');['sName','sFirst','sCode'].forEach(id=>el(id).value='');el('sClass').value='';el('studentError').textContent=''}
+function renderDashboard(){const r=db.results,avg=r.length?(r.reduce((a,x)=>a+Number(x.grade),0)/r.length).toFixed(2):'—';el('dashboardStats').innerHTML=[['QCM enregistrés',db.quizzes.length],['Participations',r.length],['Moyenne générale',avg+'/20'],['Classes participantes',new Set(r.map(x=>x.cl)).size]].map(([k,v])=>`<div class="stat-card">${k}<strong>${v}</strong></div>`).join('');el('dashboardRecent').innerHTML=r.length?'<table><thead><tr><th>Élève</th><th>Classe</th><th>QCM</th><th>Note /20</th></tr></thead><tbody>'+r.slice(-5).reverse().map(x=>`<tr><td>${safe(x.name)} ${safe(x.first)}</td><td>${safe(x.cl)}</td><td>${safe(x.title)}</td><td>${Number(x.grade).toFixed(2)}</td></tr>`).join('')+'</tbody></table>':'<p class="muted">Aucun résultat.</p>'}
+function resultInfo(x){const q=db.quizzes.find(q=>q.id===x.quizId),answers=x.answers||[];if(!q)return{total:answers.length,correct:null,incorrect:null,unanswered:null,percent:null,questions:[]};let correct=0,incorrect=0,unanswered=0;for(let i=0;i<q.questions.length;i++){const a=answers[i];if(!a)unanswered++;else if(a===q.questions[i].answer)correct++;else incorrect++}return{total:q.questions.length,correct,incorrect,unanswered,percent:q.questions.length?Math.round(correct/q.questions.length*100):0,questions:q.questions}}
+function filteredResults(){const cl=el('resultClassFilter').value,quiz=el('resultQuizFilter').value;return db.results.map((x,i)=>({...x,_idx:i})).filter(x=>(!cl||x.cl===cl)&&(!quiz||String(x.quizId)===quiz))}
+async function refreshTeacherResults(){
+ const status=el('resultsRefreshStatus');
+ if(status)status.textContent='Actualisation des résultats...';
+ if(!client||!authUser){if(status)status.textContent='Connectez-vous comme enseignant.';return;}
+ try{
+  const {data,error}=await client.from('quiz_results').select('id,quiz_id,student_name,student_first,student_class,grade,answers,correct_count,incorrect_count,unanswered_count,created_at').order('created_at',{ascending:true});
+  if(error)throw error;
+  db.results=(data||[]).map(x=>({id:x.id,quizId:x.quiz_id,title:db.quizzes.find(q=>q.id===x.quiz_id)?.title||'QCM',name:x.student_name,first:x.student_first,cl:x.student_class,correct_count:x.correct_count,incorrect_count:x.incorrect_count,unanswered_count:x.unanswered_count,grade:Number(x.grade),date:new Date(x.created_at).toLocaleString('fr-FR'),answers:x.answers||[]}));
+  renderResults();
+  if(status)status.textContent=db.results.length+' résultat(s) synchronisé(s).';
+ }catch(e){if(status){status.textContent='Erreur de synchronisation : '+errorText(e);status.className='error';}}
+}
+function renderResults(){const qs=el('resultQuizFilter'),previous=qs.value,unique=[...new Map(db.results.map(r=>[String(r.quizId),{id:r.quizId,title:r.title}])).values()];qs.innerHTML='<option value="">Tous les QCM</option>'+unique.map(q=>`<option value="${safe(String(q.id))}">${safe(q.title)}</option>`).join('');qs.value=unique.some(q=>String(q.id)===previous)?previous:'';const r=filteredResults(),avg=r.length?(r.reduce((a,x)=>a+Number(x.grade||0),0)/r.length).toFixed(2):'—';el('stats').innerHTML=`<div class="result-overview"><div class="stat-card">Participations<strong>${r.length}</strong></div><div class="stat-card">Moyenne /20<strong>${avg}</strong></div><div class="stat-card">Classes<strong>${new Set(r.map(x=>x.cl)).size}</strong></div></div>`;el('resultRows').innerHTML=r.length?r.map(x=>{const d=resultInfo(x),v=n=>n===null?'—':n;return `<tr><td><strong>${safe(x.first)} ${safe(x.name)}</strong></td><td>${safe(x.cl)}</td><td>${safe(x.title)}</td><td>${v(d.correct)} / ${d.total||'—'}</td><td>${Number(x.grade).toFixed(2)} /20</td><td class="good">${v(d.correct)}</td><td class="bad">${v(d.incorrect)}</td><td>${v(d.unanswered)}</td><td>${v(d.percent)}${d.percent===null?'':'%'}</td><td>${safe(x.date)}</td><td><button class="secondary small" onclick="showStudentResult(${x._idx})">Voir le bilan</button></td></tr>`}).join(''):'<tr><td colspan="11">Aucun résultat pour cette sélection.</td></tr>';el('studentResultDetails').classList.add('hidden')}
+function showStudentResult(idx){const x=db.results[idx];if(!x)return;const d=resultInfo(x),v=n=>n===null?'—':n,detail=el('studentResultDetails');detail.classList.remove('hidden');detail.innerHTML=`<div class="student-bilan"><div class="row" style="justify-content:space-between"><div><h3>Bilan individuel — ${safe(x.first)} ${safe(x.name)}</h3><p class="muted">${safe(x.cl)} · ${safe(x.title)} · ${safe(x.date)}</p></div><button class="secondary" onclick="el('studentResultDetails').classList.add('hidden')">Fermer ✕</button></div><div class="bilan-grid"><div class="bilan-main"><span>SCORE</span><strong>${v(d.correct)} / ${d.total||'—'}</strong></div><div class="bilan-main light"><span>NOTE SUR 20</span><strong>${Number(x.grade).toFixed(2)} / 20</strong></div></div><div class="bilan-grid four"><div class="bilan-mini good"><strong>${v(d.correct)}</strong><span>Correctes</span></div><div class="bilan-mini bad"><strong>${v(d.incorrect)}</strong><span>Incorrectes</span></div><div class="bilan-mini"><strong>${v(d.unanswered)}</strong><span>Sans réponse</span></div><div class="bilan-mini"><strong>${v(d.percent)}${d.percent===null?'':'%'}</strong><span>Réussite</span></div></div>${d.questions.length?`<details><summary>Voir les réponses question par question</summary>${d.questions.map((q,i)=>{const a=(x.answers||[])[i]||'',ok=a===q.answer;return `<div class="answer-line"><strong>Q${i+1}. ${safe(q.text)}</strong><p class="${!a?'muted':ok?'good':'bad'}">Réponse élève : ${a?safe(a)+' — '+safe(q.options['ABCD'.indexOf(a)]||''):'Sans réponse'}</p><p class="good">Bonne réponse : ${safe(q.answer)} — ${safe(q.options['ABCD'.indexOf(q.answer)]||'')}</p></div>`}).join('')}</details>`:''}</div>`;detail.scrollIntoView({behavior:'smooth',block:'start'})}
+function download(name,content,type){const a=document.createElement('a'),u=URL.createObjectURL(new Blob([content],{type}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+function exportCSV(){const rows=[['Nom','Prénom','Classe','QCM','Score','Total questions','Note /20','Correctes','Incorrectes','Sans réponse','Réussite %','Date'],...filteredResults().map(x=>{const d=resultInfo(x);return[x.name,x.first,x.cl,x.title,d.correct??'',d.total,x.grade,d.correct??'',d.incorrect??'',d.unanswered??'',d.percent??'',x.date]})];download('alex-quiz-resultats.csv','\ufeff'+rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\r\n'),'text/csv;charset=utf-8')}
+async function init(){if(!configured||!client){el('setupNotice').classList.remove('hidden');return}const {data}=await client.auth.getUser();if(data?.user)await enterTeacher(data.user)}
+renderPending();init();
+</script><script>
+/* ALEX QUIZ V20 — i18n de l'interface (les données des QCM restent intactes) */
+const I18N_AR = {"Accueil": "الرئيسية", "Élève": "التلميذ", "Enseignant": "الأستاذ", "PLATEFORME D’ÉVALUATION INTERACTIVE": "منصة التقييم التفاعلي", "Bienvenue sur votre espace d’évaluation.": "مرحباً بكم في فضاء التقييم", "Une expérience simple et agréable pour tester vos connaissances, question après question.": "تجربة سهلة وممتعة لاختبار معارفكم، سؤالاً بعد سؤال.", "Je suis élève": "أنا تلميذ", "Commencer mon QCM": "بدء الاختبار", "Espace enseignant": "فضاء الأستاذ", "✓ Questions une par une": "✓ سؤال بعد سؤال", "✓ Chronomètre": "✓ توقيت محدد", "✓ Résultats automatiques": "✓ نتائج تلقائية", "QUIZ EN COURS": "اختبار جارٍ", "Réponse A": "الجواب A", "Réponse B": "الجواب B", "Réponse C": "الجواب C", "QUESTION 04 / 20": "السؤال 04 / 20", "ALEX QUIZ • Plateforme en ligne • QCM et résultats synchronisés.": "ALEX QUIZ • منصة إلكترونية • اختبارات ونتائج متزامنة.", "Espace Élève": "فضاء التلميذ", "Nom": "النسب", "Prénom": "الاسم الشخصي", "Classe": "القسم", "Code du QCM": "رمز الاختبار", "-- Choisir une classe --": "-- اختر القسم --", "Commencer le QCM": "بدء الاختبار", "Après validation, vous ne pourrez pas revenir à la question précédente.": "بعد تأكيد الجواب، لا يمكنك الرجوع إلى السؤال السابق.", "Valider et passer à la suivante →": "تأكيد والانتقال إلى السؤال التالي ←", "Terminer et envoyer": "إنهاء وإرسال الأجوبة", "Accès enseignant": "ولوج الأستاذ", "Email": "البريد الإلكتروني", "Mot de passe": "الرمز السري", "Se connecter": "تسجيل الدخول", "Dashboard": "لوحة التحكم", "Créer un QCM": "إنشاء اختبار", "Mes QCM": "اختباراتي", "Résultats": "النتائج", "Paramètres": "الإعدادات", "Déconnexion": "تسجيل الخروج", "Tableau de bord": "لوحة التحكم", "Derniers résultats": "آخر النتائج", "Titre": "عنوان الاختبار", "Générer": "إنشاء رمز", "Durée (minutes, 0 = sans limite)": "المدة (بالدقائق، 0 = بدون حد)", "Afficher la note à l'élève": "إظهار النقطة للتلميذ", "Oui": "نعم", "Non": "لا", "Importer les questions en une fois": "استيراد الأسئلة دفعة واحدة", "Copiez-collez depuis Word. Format : question numérotée, 2 à 4 choix (A. B. puis C. D. si nécessaire), puis « Réponse : B ». Le corrigé groupé « 01 : B 02 : A » est aussi reconnu.": "انسخ الأسئلة من Word والصقها هنا. الصيغة: سؤال مرقم، اختيارات A وB وC وD ثم « Réponse : B ». ويمكن أيضاً استعمال تصحيح مجمع مثل « 01 : B 02 : A ».", "Analyser et ajouter les questions": "تحليل الأسئلة وإضافتها", "Questions ajoutées :": "الأسئلة المضافة:", "+ Ajouter une question": "+ إضافة سؤال", "Enregistrer le QCM": "حفظ الاختبار", "Résultats des élèves": "نتائج التلاميذ", "Toutes les classes": "جميع الأقسام", "Tous les QCM": "جميع الاختبارات", "Score": "النتيجة", "Note /20": "النقطة /20", "Correctes": "صحيحة", "Incorrectes": "خاطئة", "Sans réponse": "بدون جواب", "Réussite": "نسبة النجاح", "Date": "التاريخ", "Détails": "التفاصيل", "Exporter CSV (Excel) — sélection affichée": "تصدير النتائج إلى Excel (CSV)", "Votre compte enseignant est sécurisé par Supabase Auth.": "حساب الأستاذ مؤمّن بواسطة Supabase Auth.", "Chaque enseignant accède uniquement à ses QCM et résultats.": "كل أستاذ يمكنه الوصول إلى اختباراته ونتائجه فقط.", "ALEX QUIZ • Version en ligne": "ALEX QUIZ • النسخة الإلكترونية", "Question": "السؤال", "Supprimer": "حذف", "Énoncé": "نص السؤال", "Choix A": "الاختيار A", "Choix B": "الاختيار B", "Choix C": "الاختيار C", "Choix D": "الاختيار D", "Bonne réponse": "الجواب الصحيح", "Choisir": "اختر", "Points": "النقط", "Modifier": "تعديل", "Dupliquer": "نسخ", "Aucun QCM enregistré.": "لا توجد اختبارات محفوظة.", "Sans limite": "بدون حد", "Aucun résultat.": "لا توجد نتائج.", "QCM enregistrés": "الاختبارات المحفوظة", "Participations": "المشاركات", "Moyenne générale": "المعدل العام", "Classes participantes": "الأقسام المشاركة", "Moyenne /20": "المعدل /20", "Classes": "الأقسام", "Voir le bilan": "عرض الحصيلة", "Aucun résultat pour cette sélection.": "لا توجد نتائج لهذا الاختيار.", "Fermer ✕": "إغلاق ✕", "SCORE": "النتيجة", "NOTE SUR 20": "النقطة على 20", "Voir les réponses question par question": "عرض الأجوبة سؤالاً بسؤال", "Réponse élève :": "جواب التلميذ:", "Bonne réponse :": "الجواب الصحيح:", "Résultat de votre QCM": "نتيجة الاختبار", "Retour à l’accueil": "العودة إلى الرئيسية", "SCORE SUR": "النتيجة من أصل", "Configuration requise : renseigner SUPABASE_URL et SUPABASE_ANON_KEY dans index.html avant publication.": "الإعداد مطلوب: أدخل إعدادات Supabase في ملف index.html قبل النشر."};
+const I18N_PATTERNS = [
+ [/^Question (\d+) sur (\d+)$/,(_,a,b)=>`السؤال ${a} من ${b}`],
+ [/^(\d+) \/ (\d+) réponses$/,(_,a,b)=>`${a} / ${b} أجوبة`],
+ [/^Temps : (.*)$/,(_,v)=>`الوقت: ${v}`],
+ [/^(\d+) question\(s\) détectée\(s\)\. Vérifiez les réponses avant enregistrement\.$/,(_,n)=>`تم التعرف على ${n} سؤال. تحقق من الأجوبة قبل الحفظ.`],
+ [/^Question (\d+)$/,(_,n)=>`السؤال ${n}`],
+ [/^Bilan individuel — (.*)$/,(_,n)=>`الحصيلة الفردية — ${n}`],
+ [/^QCM enregistré !$/,()=>`تم حفظ الاختبار بنجاح!`],
+ [/^Mode modification$/,()=>`وضع التعديل`],
+ [/^Réponse élève : (.*)$/,(_,v)=>`جواب التلميذ: ${v}`],
+ [/^Bonne réponse : (.*)$/,(_,v)=>`الجواب الصحيح: ${v}`],
+ [/^Temps écoulé — réponses envoyées\.$/,()=>`انتهى الوقت — تم إرسال الأجوبة.`],
+ [/^Évaluation terminée — réponses enregistrées\.$/,()=>`انتهى الاختبار — تم حفظ الأجوبة.`],
+ [/^Vos réponses ont été enregistrées\. Votre enseignant communiquera votre note\.$/,()=>`تم حفظ أجوبتك. سيخبرك الأستاذ بالنقطة.`],
+ [/^\d+ questions • (.*) min$/,(_,n)=>`${n} دقيقة`]
+];
+const I18N_ATTRIBUTES={
+ 'Ex. ROBOT50':'مثال: ROBOT50',
+ 'Contrôle Robotique':'فرض الروبوتيك',
+ 'Mot de passe':'الرمز السري',
+ 'enseignant@exemple.com':'enseignant@exemple.com',
+ 'ROBOT50':'ROBOT50',
+ '01. Un robot est...\n☐ A. ...\n☐ B. ...\n☐ C. ...\n☐ D. ...\nRéponse : B':'01. ما هو الروبوت؟\n☐ A. ...\n☐ B. ...\n☐ C. ...\n☐ D. ...\nRéponse : B'
+};
+let uiLanguage='fr';
+const i18nOriginalText=new WeakMap(),i18nOriginalAttr=new WeakMap();
+function translateLabel(s){
+ const trimmed=s.trim();
+ if(Object.prototype.hasOwnProperty.call(I18N_AR,trimmed))return I18N_AR[trimmed];
+ for(const [re,fn] of I18N_PATTERNS){const m=trimmed.match(re);if(m)return fn(...m)}
+ return null;
+}
+function translateTextNode(node){
+ if(!node.parentElement||node.parentElement.closest('script,style,textarea'))return;
+ const raw=node.nodeValue;if(!raw||!raw.trim())return;
+ let original=i18nOriginalText.get(node);
+ if(original===undefined){original=raw;i18nOriginalText.set(node,raw)}
+ const value=uiLanguage==='ar'?translateLabel(original):null;
+ const next=value===null?original:original.replace(original.trim(),value);
+ if(node.nodeValue!==next)node.nodeValue=next;
+}
+function translateAttributes(element){
+ if(!element.getAttribute)return;
+ for(const attr of ['placeholder','title','aria-label']){
+  if(!element.hasAttribute(attr))continue;
+  let old=i18nOriginalAttr.get(element)||{};
+  if(!(attr in old)){old[attr]=element.getAttribute(attr);i18nOriginalAttr.set(element,old)}
+  const base=old[attr],translated=I18N_ATTRIBUTES[base]||translateLabel(base);
+  const next=uiLanguage==='ar'&&translated?translated:base;
+  if(element.getAttribute(attr)!==next)element.setAttribute(attr,next);
+ }
+}
+function translateTree(root){
+ if(root.nodeType===3){translateTextNode(root);return}
+ if(root.nodeType!==1&&root.nodeType!==9)return;
+ if(root.nodeType===1){translateAttributes(root);if(root.matches('script,style'))return}
+ const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+ let n;while((n=walker.nextNode()))translateTextNode(n);
+ if(root.querySelectorAll)root.querySelectorAll('[placeholder],[title],[aria-label]').forEach(translateAttributes);
+}
+function setLanguage(lang){
+ uiLanguage=lang==='ar'?'ar':'fr';
+ document.documentElement.lang=uiLanguage;
+ document.documentElement.dir=uiLanguage==='ar'?'rtl':'ltr';
+ try{localStorage.setItem('alexQuizLanguage',uiLanguage)}catch(e){}
+ document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('selected',b.dataset.lang===uiLanguage);b.setAttribute('aria-pressed',String(b.dataset.lang===uiLanguage))});
+ translateTree(document.body);
+}
+const i18nObserver=new MutationObserver(records=>{
+ for(const record of records){
+  if(record.type==='childList')for(const node of record.addedNodes)translateTree(node);
+  else if(record.type==='characterData'){
+   const n=record.target,old=i18nOriginalText.get(n);
+   // New app-rendered text is a new source string; do not treat our own translation as new content.
+   if(old!==undefined){const translated=translateLabel(old);if(n.nodeValue===old||(translated&&n.nodeValue===old.replace(old.trim(),translated)))continue}
+   i18nOriginalText.delete(n);translateTextNode(n);
+  }
+ }
+});
+try{uiLanguage=localStorage.getItem('alexQuizLanguage')==='ar'?'ar':'fr'}catch(e){}
+setLanguage(uiLanguage);
+i18nObserver.observe(document.body,{childList:true,subtree:true,characterData:true});
+</script></body></html>
